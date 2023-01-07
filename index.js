@@ -90,19 +90,28 @@ let finances = [
 console.log("Financial Analysis");
 console.log("-------------------------")
 
-// total number of months included in the dataSet
+//calculate total number of months included in the dataSet
 let totalMonths = finances.length;
-console.log("Total Months:", finances.length);
+console.log("Total Months: ", totalMonths);
 
 // calculate net profit over entire Period
 let netProfit = 0;
-for (let i = 0; i < finances.length; i++) {
+for (let i = 0; i < totalMonths; i++) {
 netProfit = netProfit + finances[i][1];
 }
-console.log("The net Profit is = " + netProfit);
+console.log("The net Total Profit is = " + netProfit);
 
-let difference = 0;
-for (let i = 0; i< finances.length; i++) {
-    difference = finances[i+1][1] - finances[i][0];
-    console.log(difference);
+//calculate average change in profit/losses
+
+let changeInProfit = []     //create an array to store the changes
+
+let totalOfChanges = 0;
+
+for (let i = 0; i< totalMonths - 1; i++) {
+    changeInProfit.push(finances[i+1][1] - finances[i][1]);
+    totalOfChanges = totalOfChanges + changeInProfit[i];
 }
+
+let totalAvgChange = totalOfChanges / changeInProfit.length;                  //calculate the avg of total changes
+
+console.log("Average Change :", totalAvgChange.toFixed(2));
