@@ -90,28 +90,51 @@ let finances = [
 console.log("Financial Analysis");
 console.log("-------------------------")
 
-//calculate total number of months included in the dataSet
+//calculate total number of months included in the dataSet //
 let totalMonths = finances.length;
 console.log("Total Months: ", totalMonths);
 
-// calculate net profit over entire Period
+// calculate net profit over entire Period //
 let netProfit = 0;
 for (let i = 0; i < totalMonths; i++) {
 netProfit = netProfit + finances[i][1];
 }
-console.log("The net Total Profit is = " + netProfit);
+console.log("The net Total Profit is: " +"$" + netProfit);
 
-//calculate average change in profit/losses
+//calculate average change in profit/losses //
 
-let changeInProfit = []     //create an array to store the changes
+let changeInProfit = []     //create an array to store the changes //
 
 let totalOfChanges = 0;
 
+let Dates = []
+
 for (let i = 0; i< totalMonths - 1; i++) {
+    
     changeInProfit.push(finances[i+1][1] - finances[i][1]);
+
     totalOfChanges = totalOfChanges + changeInProfit[i];
 }
 
 let totalAvgChange = totalOfChanges / changeInProfit.length;                  //calculate the avg of total changes
 
-console.log("Average Change :", totalAvgChange.toFixed(2));
+console.log("Average Change: " + "$" + totalAvgChange.toFixed(2));
+
+//calculate greatest increase in profits//
+
+let greatestIncrease = Math.max(...changeInProfit);
+// console.log(changeInProfit.indexOf(greatestIncrease));       finding the index of greatest decrease i.e 24
+
+console.log("Greatest Increase in Profits: " ,finances[25][0], "$" + greatestIncrease);
+
+// calculate greatest decrease in profits
+
+let greatestDecrease = Math.min(...changeInProfit);
+// console.log(changeInProfit.indexOf(greatestDecrease));        finding the index of greatsest decrease i.e 43
+
+console.log("Greatest Decrease in Profits: " ,finances[44][0], "$" + greatestDecrease);
+
+
+
+
+
