@@ -15,4 +15,9 @@ It also utilizes variable, for- loops, math, multidimentional Arrays.
   Print the analyzed data to console.
 
   ## Screenshot: 
-  !
+  ![Screenshot](Screenshot_console.png)
+
+  ## Submission: 
+
+  ### Deployed application URL:https://vinita686.github.io/Console-Finances/ 
+  ### GitHub Repo URL: https://github.com/Vinita686/Console-Finances
