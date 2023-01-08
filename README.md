@@ -19,5 +19,5 @@ It also utilizes variable, for- loops, math, multidimentional Arrays.
 
   ## Submission: 
 
-  ### Deployed application URL:https://vinita686.github.io/Console-Finances/ 
+  ### Deployed application URL: https://vinita686.github.io/Console-Finances/ 
   ### GitHub Repo URL: https://github.com/Vinita686/Console-Finances
