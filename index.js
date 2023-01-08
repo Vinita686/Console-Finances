@@ -124,6 +124,7 @@ console.log("Average Change: " + "$" + totalAvgChange.toFixed(2));
 
 let greatestIncrease = Math.max(...changeInProfit);
 // console.log(changeInProfit.indexOf(greatestIncrease));       finding the index of greatest decrease i.e 24
+// Added the index 25 as finances array has 86 elements and changeInprofit array has 85 elements.
 
 console.log("Greatest Increase in Profits: " ,finances[25][0], "$" + greatestIncrease);
 
@@ -131,6 +132,7 @@ console.log("Greatest Increase in Profits: " ,finances[25][0], "$" + greatestInc
 
 let greatestDecrease = Math.min(...changeInProfit);
 // console.log(changeInProfit.indexOf(greatestDecrease));        finding the index of greatsest decrease i.e 43
+// Added the index 44 as finances array has 86 elements and changeInprofit array has 85 elements.
 
 console.log("Greatest Decrease in Profits: " ,finances[44][0], "$" + greatestDecrease);
 
